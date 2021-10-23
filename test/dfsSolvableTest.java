@@ -1,4 +1,6 @@
+import finder.BfsFinder;
 import finder.DfsFinder;
+import finder.Finder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +21,7 @@ public class dfsSolvableTest {
         int[][] maze3 = {
                 {0,0,2,0,1,0},
         };
-        DfsFinder dfsFinder = new DfsFinder();
+        Finder dfsFinder = new DfsFinder();
         dfsFinder.setMaze(maze1);
         try{
             Assertions.assertTrue(dfsFinder.isSolvable());
@@ -56,7 +58,7 @@ public class dfsSolvableTest {
         int[][] maze3 = {
                 {0,0,2,3,1,0},
         };
-        DfsFinder dfsFinder = new DfsFinder();
+        Finder dfsFinder = new DfsFinder();
         dfsFinder.setMaze(maze1);
         try{
             Assertions.assertFalse(dfsFinder.isSolvable());
@@ -125,7 +127,7 @@ public class dfsSolvableTest {
                 {0,0,0,0,0,0},
                 {0,0,0,0,0,0},
         };
-        DfsFinder dfsFinder = new DfsFinder();
+        Finder dfsFinder = new DfsFinder();
         dfsFinder.setMaze(maze1);
         try{
             dfsFinder.isSolvable();
